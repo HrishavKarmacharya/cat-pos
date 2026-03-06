@@ -1,0 +1,45 @@
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Add New Brand') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+                    <div class="mt-8 text-2xl">
+                        Create Brand
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <form method="POST" action="{{ route('brands.store') }}">
+                        @csrf
+
+                        <!-- Name -->
+                        <div class="col-span-6 sm:col-span-4">
+                            <x-label for="name" value="{{ __('Brand Name') }}" />
+                            <x-input id="name" type="text" class="mt-1 block w-full" name="name" :value="old('name')" required autofocus />
+                            <x-input-error for="name" class="mt-2" />
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-span-6 sm:col-span-4 mt-4">
+                            <x-label for="description" value="{{ __('Description') }}" />
+                            <textarea id="description" name="description" class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{ old('description') }}</textarea>
+                            <x-input-error for="description" class="mt-2" />
+                        </div>
+
+                        <div class="flex items-center justify-end mt-4">
+                            <x-button class="ms-4">
+                                {{ __('Create Brand') }}
+                            </x-button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
