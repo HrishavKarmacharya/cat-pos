@@ -16,12 +16,28 @@ Catmando Shoppe Craft is a web application designed to help local artisans and s
 
 ### Features
 
-*   **Dynamic Dashboard:** Get a quick overview of your business with dynamic stats and sales trends.
-*   **Sales Management:** Record and track all sales transactions.
-*   **Inventory Control:** Manage products, purchases, and stock movements in real-time.
-*   **Customer & Supplier Directory:** Keep a record of all your customers and suppliers.
-*   **Reporting:** Generate insightful reports to understand your business better.
-*   **Role-Based Access:** Secure your data with different user roles and permissions.
+* **Dynamic Dashboard:** Get a quick overview of your business with dynamic stats and sales trends.
+* **Sales Management:** Record and track all sales transactions.
+* **Inventory Control:** Manage products, purchases, and stock movements in real-time.
+* **Customer & Supplier Directory:** Keep a record of all your customers and suppliers.
+* **Reporting:** Generate insightful reports to understand your business better.
+* **Role-Based Access:** Secure your data with different user roles and permissions.
+
+---
+
+## Demo Login Credentials
+
+You can use the following demo accounts to explore the system features.
+
+| Role | Email | Password |
+|-----|-----|-----|
+| **Admin** | admin@example.com | 1234 |
+| **Staff (Test User)** | test@example.com | test |
+
+### Access Levels
+
+- **Admin:** Full access to dashboard, inventory, sales, customers, suppliers, and reports.
+- **Staff:** Limited access for daily operations such as processing sales and viewing inventory.
 
 ---
 
@@ -31,63 +47,81 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Prerequisites
 
-*   PHP >= 8.1
-*   Composer
-*   Node.js & npm
-*   A web server (e.g., Apache, Nginx)
-*   A database (e.g., MySQL, PostgreSQL, SQLite)
+* PHP >= 8.1
+* Composer
+* Node.js & npm
+* A web server (e.g., Apache, Nginx)
+* A database (e.g., MySQL, PostgreSQL, SQLite)
 
-### Installation
+---
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/your-username/catmando-shoppe-craft.git
-    cd catmando-shoppe-craft
-    ```
+## Installation
 
-2.  **Install PHP dependencies:**
-    ```sh
-    composer install
-    ```
+### 1. Clone the repository
 
-3.  **Install JavaScript dependencies:**
-    ```sh
-    npm install
-    ```
+```bash
+git clone https://github.com/HrishavKarmacharya/cat-pos.git
+cd cat-pos
+```
 
-4.  **Create a copy of the `.env` file:**
-    ```sh
-    cp .env.example .env
-    ```
+### 2. Install PHP dependencies
 
-5.  **Generate an application key:**
-    ```sh
-    php artisan key:generate
-    ```
+```bash
+composer install
+```
 
-6.  **Configure your `.env` file** with your database credentials and other environment settings.
+### 3. Install JavaScript dependencies
 
-7.  **Run the database migrations and seeders:**
-    ```sh
-    php artisan migrate --seed
-    ```
+```bash
+npm install
+```
 
-8.  **Build the assets:**
-    ```sh
-    npm run build
-    ```
+### 4. Create a copy of the `.env` file
 
-9.  **Start the development server:**
-    ```sh
-    php artisan serve
-    ```
+```bash
+cp .env.example .env
+```
+
+### 5. Generate an application key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure your `.env` file
+
+Update the database credentials and environment settings.
+
+### 7. Run the database migrations and seeders
+
+```bash
+php artisan migrate --seed
+```
+
+### 8. Build the assets
+
+```bash
+npm run build
+```
+
+### 9. Start the development server
+
+```bash
+php artisan serve
+```
+
+Open in your browser:
+
+```
+http://127.0.0.1:8000
+```
 
 ---
 
 ## Built With
 
-*   [Laravel](https://laravel.com/) - The web application framework used.
-*   [Livewire](https://laravel-livewire.com/) - For building dynamic interfaces.
-*   [Tailwind CSS](https://tailwindcss.com/) - For styling the application.
-*   [Chart.js](https://www.chartjs.org/) - For creating interactive charts.
-*   [Vite](https://vitejs.dev/) - For frontend tooling.
+* Laravel – Web application framework
+* Livewire – Dynamic frontend components
+* Tailwind CSS – UI styling
+* Chart.js – Data visualization
+* Vite – Frontend tooling
